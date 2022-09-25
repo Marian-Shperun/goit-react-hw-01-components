@@ -1,6 +1,7 @@
 import { Table, BodyTable, HeadTable } from './TransactionHistory.styled';
+import PropTypes from 'prop-types';
+
 export const TransactionHistory = ({ items }) => {
-  console.log(items);
   return (
     <Table className="transaction-history">
       <HeadTable>
@@ -25,4 +26,8 @@ export const TransactionHistory = ({ items }) => {
       </BodyTable>
     </Table>
   );
+};
+
+TransactionHistory.propTypes = {
+  items: PropTypes.array.isRequired,
 };
