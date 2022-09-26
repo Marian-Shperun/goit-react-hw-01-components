@@ -1,5 +1,6 @@
-import css from './Statistics.module.css';
 import PropTypes from 'prop-types';
+import getRandomHexColor from './randomColor';
+import css from './Statistics.module.css';
 
 export const StatisticsList = ({ stats }) => {
   return (
@@ -16,11 +17,6 @@ export const StatisticsList = ({ stats }) => {
     </ul>
   );
 };
-
-function getRandomHexColor() {
-  const color = `#${Math.floor(Math.random() * 16777215).toString(16)}`;
-  return { backgroundColor: color };
-}
 
 StatisticsList.propTypes = {
   stats: PropTypes.array.isRequired,
